@@ -1692,10 +1692,10 @@ class WeekView @JvmOverloads constructor(context: Context, attrs: AttributeSet? 
                 val bottom = hourHeight * eventRect.bottom / 60 + eventsTop
 
                 // Calculate left and right.
-                var left = startFromPixel + eventRect.left
+                var left = startFromPixel + eventRect.left* widthPerDay
                 if (left < startFromPixel)
                     left += overlappingEventGap
-                var right = left + eventRect.width
+                var right = left + eventRect.width* widthPerDay
                 if (right < startFromPixel + widthPerDay)
                     right -= overlappingEventGap
 
