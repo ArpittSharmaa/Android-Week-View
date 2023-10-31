@@ -85,7 +85,7 @@ class WeekView @JvmOverloads constructor(context: Context, attrs: AttributeSet? 
     private val allDaySideTitleTextPaint = TextPaint(Paint.ANTI_ALIAS_FLAG)
     private val mEmptyEventPaint = Paint()
     private val mHeaderBackgroundPaint: Paint = Paint()
-    private val mDayBackgroundPaint: Paint = Paint()
+    private var mDayBackgroundPaint: Paint = Paint()
     private val mHourSeparatorPaint = Paint()
     private val mTodayColumnBackgroundPaint: Paint = Paint()
     private val mFutureBackgroundPaint: Paint = Paint()
