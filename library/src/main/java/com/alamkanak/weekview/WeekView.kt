@@ -1285,7 +1285,7 @@ class WeekView @JvmOverloads constructor(context: Context, attrs: AttributeSet? 
     private fun drawTimeColumnAndAxes(canvas: Canvas) {
         canvas.save()
         // Clip to paint in left column only.
-        canvas.clipRect(0.0f, headerHeight + weekDaysHeaderRowTotalPadding, mHeaderColumnWidth*5, height.toFloat())
+        canvas.clipRect(0.0f, headerHeight + weekDaysHeaderRowTotalPadding, mHeaderColumnWidth, height.toFloat())
 
         for (i in 0 until numberOfPeriods) {
             // If we are showing half hours (eg. 5:30am), space the times out by half the hour height
