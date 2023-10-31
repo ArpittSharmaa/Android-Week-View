@@ -85,7 +85,7 @@ class WeekView @JvmOverloads constructor(context: Context, attrs: AttributeSet? 
     private val allDaySideTitleTextPaint = TextPaint(Paint.ANTI_ALIAS_FLAG)
     private val mEmptyEventPaint = Paint()
     private val mHeaderBackgroundPaint: Paint = Paint()
-    var mDayBackgroundPaint: Paint = Paint()
+    private var mDayBackgroundPaint: Paint = Paint()
     private val mHourSeparatorPaint = Paint()
     private val mTodayColumnBackgroundPaint: Paint = Paint()
     private val mFutureBackgroundPaint: Paint = Paint()
@@ -1692,10 +1692,10 @@ class WeekView @JvmOverloads constructor(context: Context, attrs: AttributeSet? 
                 val bottom = hourHeight * eventRect.bottom / 60 + eventsTop
 
                 // Calculate left and right.
-                var left = startFromPixel + eventRect.left * widthPerDay
+                var left = startFromPixel + eventRect.left
                 if (left < startFromPixel)
                     left += overlappingEventGap
-                var right = left + eventRect.width * widthPerDay
+                var right = left + eventRect.width
                 if (right < startFromPixel + widthPerDay)
                     right -= overlappingEventGap
 
